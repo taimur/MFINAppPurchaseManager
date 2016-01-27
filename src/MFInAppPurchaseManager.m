@@ -216,5 +216,8 @@
     _hasBoughtPremium = YES;
 }
 
-
+-(void)dealloc
+{
+    [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
+}
 @end
